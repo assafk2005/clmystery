@@ -239,6 +239,45 @@ Show line numbers along with the matching lines:
 
 	grep -n "Daffy" famousducks.txt
 
+Find
+---
+
+The `cat` command allows you to search for files and directories based on different conditions such as name, size, type, or modification time.
+
+Here is the most basic example: searching for a file named "notes.txt" in the current directory:
+
+	find . -name "notes.txt"
+
+If you want the search to be case-insensitive:
+
+	find . -iname "notes.txt"
+
+You can also search for all files with a specific extension:
+
+	find . -name "*.txt"
+
+To search for folders (directories) only:
+
+	find . -type d -name "images"
+
+To search for regular files:
+
+	find . -type f -name "*.jpg"
+
+You can find files based on size.
+
+For example, files larger than 10 MB:
+
+	find . -size +10M
+
+Or files smaller than 1 KB:
+
+	find . -size -1k
+
+To search for files modified in the last 24 hours:
+
+	find . -mtime -1
+
 Cat
 ---
 
